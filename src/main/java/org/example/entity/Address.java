@@ -21,11 +21,4 @@ public class Address {
     private String street;
     private String city;
 
-    @OneToOne
-    @JoinColumn(name = "id_client")
-    private Client client;
-    @OneToOne
-    @JoinColumn(name = "id_event")
-    private Event events;
-
 }

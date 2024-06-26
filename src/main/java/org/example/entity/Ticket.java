@@ -22,10 +22,10 @@ public class Ticket {
     private int ticketNumber;
     private Enum<Type> type;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "id_client")
     private Client client;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "id_event")
     private Event event;
 }

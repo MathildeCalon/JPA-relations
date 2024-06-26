@@ -22,10 +22,10 @@ public class Event {
     private int id;
     private String name;
     private LocalDate date;
-    private Time hour;
+    private String hour;
     private int ticketNumber;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "id_address")
     private Address address;
 

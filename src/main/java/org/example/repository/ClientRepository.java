@@ -4,8 +4,6 @@ import org.example.entity.Client;
 
 import javax.persistence.EntityTransaction;
 import static org.example.util.Global.em;
-import static org.example.util.Global.emf;
-
 
 public class ClientRepository {
 
