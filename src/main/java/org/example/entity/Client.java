@@ -31,14 +31,14 @@ public class Client {
     @OneToMany(mappedBy = "client")
     private List<Ticket> tickets;
 
-//    @Override
-//    public String toString(){
-//        return "Client{"+
-//                "firstname=" + firstname + " / " +
-//                "lastname=" + lastname + " / " +
-//                "age="+ age + " / " +
-//                "telephone=" + " / " +
-//                "id=" + id +
-//                "}";
-//    }
+    @Override
+    public String toString(){
+        return "Client{"+
+                "firstname=" + firstname + " / " +
+                "lastname=" + lastname + " / " +
+                "age="+ age + " / " +
+                "telephone=" + " / " +
+                "id=" + id +
+                "}";
+    }
 }

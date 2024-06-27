@@ -66,6 +66,8 @@ public class Main {
                 .client(ClientRepository.getById(2))
                 .build();
 
-        TicketRepository.create(ticket2);
+//        TicketRepository.create(ticket2);
+        TicketRepository.getTicketByEvent(1);
+
     }
 }

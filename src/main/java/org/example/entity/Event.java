@@ -6,7 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.sql.Time;
 import java.time.LocalDate;
 
 @Entity
@@ -29,14 +28,14 @@ public class Event {
     @JoinColumn(name = "id_address")
     private Address address;
 
-//    @Override
-//    public String toString(){
-//        return "Event{"+
-//                "id=" + id + " / " +
-//                "name=" + name + " / " +
-//                "date=" + date + " / " +
-//                "hour=" + hour + " / " +
-//                "number of tickets=" + ticketNumber +
-//                "}";
-//    }
+    @Override
+    public String toString(){
+        return "Event{"+
+                "id=" + id + " / " +
+                "name=" + name + " / " +
+                "date=" + date + " / " +
+                "hour=" + hour + " / " +
+                "number of tickets=" + ticketNumber +
+                "}";
+    }
 }

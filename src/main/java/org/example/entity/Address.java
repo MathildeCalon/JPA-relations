@@ -21,4 +21,12 @@ public class Address {
     private String street;
     private String city;
 
+    @Override
+    public String toString(){
+        return "Event{"+
+                "id=" + id + " / " +
+                "street=" + street + " / " +
+                "city=" + city + " / " +
+                "}";
+    }
 }

@@ -16,4 +16,5 @@ public class EventRepository {
     public static Event getById(int id) {
         return em.find(Event.class,id);
     }
+
 }

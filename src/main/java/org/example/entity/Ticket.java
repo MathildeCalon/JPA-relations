@@ -28,4 +28,15 @@ public class Ticket {
     @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "id_event")
     private Event event;
+
+        @Override
+    public String toString(){
+        return "Event{"+
+                "id=" + id + " / " +
+                "ticket number=" + ticketNumber + " / " +
+                "type=" + type + " / " +
+                "client=" + client.getId() + " / " +
+                "event=" + event.getId() +
+                "}";
+    }
 }
