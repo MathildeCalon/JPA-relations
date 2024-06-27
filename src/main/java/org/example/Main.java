@@ -4,6 +4,7 @@ import org.example.entity.Address;
 import org.example.entity.Client;
 import org.example.entity.Event;
 import org.example.entity.Ticket;
+import org.example.repository.AddressRepository;
 import org.example.repository.ClientRepository;
 import org.example.repository.EventRepository;
 import org.example.repository.TicketRepository;
@@ -21,6 +22,7 @@ public class Main {
                 .street("Thélus")
                 .build();
 
+
         Client client1 = Client.builder()
                 .firstname("Adele")
                 .lastname("Delval")
@@ -31,8 +33,6 @@ public class Main {
                         .city("Thumeries")
                         .build())
                 .build();
-
-//        ClientRepository.create(client1);
 
         Client client2 = Client.builder()
                 .firstname("Lea")
@@ -58,16 +58,27 @@ public class Main {
                 .client(client2)
                 .build();
 
-//        TicketRepository.create(ticket1);
         Ticket ticket2 = Ticket.builder()
                 .type(Type.GOLD)
                 .ticketNumber(32)
                 .event(EventRepository.getById(1))
-                .client(ClientRepository.getById(2))
+                .client(client2)
                 .build();
 
-//        TicketRepository.create(ticket2);
+
+        AddressRepository.create(address1);
+        ClientRepository.create(client1);
+        ClientRepository.create(client2);
+        TicketRepository.create(ticket1);
+        TicketRepository.create(ticket2);
         TicketRepository.getTicketByEvent(1);
+    }
+
+    public void ihm(){
+        System.out.println("1. Créer un utilisateur");
+        System.out.println("2. Réserver un ticket");
+        System.out.println("3. Consulter les évènements");
+        System.out.println("4. ");
 
     }
 }

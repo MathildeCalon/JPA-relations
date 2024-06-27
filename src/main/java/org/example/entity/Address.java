@@ -9,6 +9,8 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
+@Table(uniqueConstraints={
+        @UniqueConstraint(columnNames = {"street", "city"})})
 @Data
 @Builder
 @NoArgsConstructor
