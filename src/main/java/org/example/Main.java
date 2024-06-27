@@ -4,12 +4,12 @@ import org.example.controllers.AddressController;
 import org.example.controllers.ClientController;
 import org.example.controllers.EventController;
 import org.example.controllers.TicketController;
+import org.example.entity.Client;
 
 
 public class Main {
     public static void main(String[] args) {
-        new EventController().newEvent();
-        new TicketController().newTicket();
+        new ClientController().newClient();
     }
 
     public void ihm(){

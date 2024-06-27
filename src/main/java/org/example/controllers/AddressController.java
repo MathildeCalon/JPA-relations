@@ -5,16 +5,23 @@ import org.example.repository.AddressRepository;
 import org.example.repository.ClientRepository;
 
 import java.util.List;
+import java.util.Scanner;
 
 public class AddressController {
     private AddressRepository addressRepository;
+    private Scanner scanner;
 
     public AddressController(){
         addressRepository = new AddressRepository();
+        scanner = new Scanner(System.in);
     }
 
 
-    public void newAddress(String street, String city){
+    public void newAddress(){
+        System.out.println("Quelle rue ?");
+        String street = scanner.next();
+        System.out.println("Quelle ville ?");
+        String city = scanner.next();
         Address address = Address.builder()
                 .city(city)
                 .street(street)
@@ -23,7 +30,9 @@ public class AddressController {
         addressRepository.create(address);
     }
 
-    public void displayAddress(int addressId){
+    public void displayAddress(){
+        System.out.println("Quel id d'adresse ?");
+        int addressId = scanner.nextInt();
         System.out.println(addressRepository.getById(addressId));
     }
 
@@ -34,11 +43,9 @@ public class AddressController {
         }
     }
 
-//    public void updateAddress(){
-//
-//    }
-
-    public void deleteAddress(int addressId){
+    public void deleteAddress(){
+        System.out.println("Quel id d'adresse ?");
+        int addressId = scanner.nextInt();
         addressRepository.removeAddress(addressId);
     }
 }
