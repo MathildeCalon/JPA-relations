@@ -9,7 +9,7 @@ import org.example.entity.Client;
 
 public class Main {
     public static void main(String[] args) {
-        new ClientController().newClient();
+        new ClientController().deleteClient();
     }
 
     public void ihm(){

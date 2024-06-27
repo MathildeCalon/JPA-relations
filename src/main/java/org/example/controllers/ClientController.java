@@ -57,7 +57,9 @@ public class ClientController {
         }
     }
 
-    public void deleteClient(int clientId){
+    public void deleteClient(){
+        System.out.println("Quel id ?");
+        int clientId = scanner.nextInt();
         clientRepository.removeClient(clientId);
     }
 }
